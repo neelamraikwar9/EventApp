@@ -11,7 +11,7 @@ function App() {
   console.log("data:", data)
   const [searchTerm, setSearchTerm] = useState("");
   const [eventFilter, setEventFilter] = useState("Both")
-  const [newdata, setnewdata] = useState(data)
+  const [newdata, setNewData] = useState(data)
   // const searched = data.filter(meet => meet.eventTitle === searchTerm)
  
 
@@ -25,7 +25,7 @@ function App() {
 
   useEffect(()=>{
     if(data){
-      setnewdata(filteredEvents)
+      setNewData(filteredEvents)
     }
   },[data, eventFilter])
 
@@ -34,18 +34,22 @@ function App() {
       search(searchTerm)
   },[data])
 
-console.log(newdata)
+console.log(data)
   const search = (value) => {
-    console.log(value,'fjiwoefjwoei')
+    console.log(value,'Value')
     setSearchTerm(value)
+
     
-    if(searchTerm !== ''){
+  
+    if (value.trim() !== ''){
+    console.log("in if search term...", searchTerm)
       const filterData =  data.filter((item) => item.eventTitle.toLowerCase().includes(searchTerm.toLowerCase()));
       console.log(filterData,'ejrieowefiweifowefi', newdata, data)
-      setnewdata(filterData)
+      setNewData(filterData)
+      console.log(data)
     }else{
-    console.log(value,'fjiwoefjwoeifwefwe')
-      setnewdata(data)
+    console.log("in else search term...", searchTerm)
+      setNewData(data)
     }
   }
 
@@ -61,7 +65,6 @@ console.log(newdata)
                 <div className="input-group">
                 <h1>Meetup Events</h1>
                 <div className="ms-5 ps-5"> 
-                {/* ps-5  me-5 */}
                 <label htmlFor='eventFil'>Select Event Type
                 <select id="eventFil" value={eventFilter} onChange={(event) => {handleSet(event)}}>
                     <option value="Both">Both</option>
@@ -79,7 +82,7 @@ console.log(newdata)
                   <div className="card mb-5">    
                   <div className="container">
                   {/* <p><a href={even.detailsPage} {even.detailTitle}> */}
-                  <img  src={meet.eventImages} className="img-fluid" alt={meet.eventTitle}/>
+                  <img  src={meet.eventImage} className="img-fluid" alt={meet.eventTitle}/>
                   {/* </a></p> */}
                   <p>Day/Date:- {meet.eventDay}, {meet.eventDate}</p>
                   <p>Time:- {meet.eventBeginingTime} to {meet.eventEndingTime}</p>
