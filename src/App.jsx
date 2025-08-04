@@ -3,6 +3,10 @@ import useFetch from './useFetch';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NavbarFilter from './components/NavbarFilter';
+import { Link } from 'react-router-dom';
+import DetailPage from './DetailPage';
+
+
 
 // import Navbar from './components/Navbar';
 
@@ -17,7 +21,7 @@ function App() {
   const [meetData, setMeetData] = useState(data)
   console.log(data)
 
-
+ 
   const filteredEvents = eventFilter === "Both" ? data : data?.filter((item) => item.eventMode === eventFilter);
   console.log(filteredEvents)
   
@@ -173,13 +177,17 @@ return (
                 <br/>
                 <br/>
         <div className="row">
+
+          
           {meetData?.map((meet) => 
                  <div key={meet._id} className="col-md-4">
                   <div className="card mb-5">    
                   <div className="container">
-                  {/* <p><a href={even.detailsPage} {even.detailTitle}> */}
+                   {/* <p><Link to={`/meet/${meet._id}`} > */}
+                   <p><Link to={`/meet/${meet._id}`} >
+
                   <img  src={meet.eventImage} className="img-fluid" alt={meet.eventTitle}/>
-                  {/* </a></p> */}
+                  </Link></p>
                   <p>Day/Date:- {meet.eventDay}, {meet.eventDate}</p>
                   <p>Time:- {meet.eventBeginingTime} to {meet.eventEndingTime}</p>
                   <h5>{meet.eventTitle}</h5>
