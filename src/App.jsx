@@ -4,7 +4,6 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NavbarFilter from './components/NavbarFilter';
 import { Link } from 'react-router-dom';
-import DetailPage from './DetailPage';
 // import Navbar from './components/Navbar';
 
 function App() {
@@ -145,7 +144,7 @@ return (
           <div>
                 <div className="input-group">
                 <h1>Meetup Events</h1>
-                <div className="ms-5 ps-5"> 
+                <div className="ms-auto ps-5"> 
                 <label htmlFor='eventFil'>Select Event Type
                 <select id="eventFil" value={eventFilter} onChange={(event) => setEventFilter(event.target.value)}>
                     <option value="Both">Both</option>
@@ -167,9 +166,9 @@ return (
                   <p><Link to={`/meet/${meet._id}`} >
                   <img  src={meet.eventImage} className="img-fluid" alt={meet.eventTitle}/>
                   </Link></p>
-                  <p>Day/Date:- {meet.eventDay}, {meet.eventDate}</p>
+                  <p>{meet.eventDay}, {meet.eventDate}</p>
                   <p>Time:- {meet.eventBeginingTime} to {meet.eventEndingTime}</p>
-                  <h5>{meet.eventTitle}</h5>
+                  <h5>{meet.eventTitle}({meet.eventMode})</h5>
                  </div>
                  </div>
                  </div>
