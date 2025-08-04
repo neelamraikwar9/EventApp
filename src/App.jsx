@@ -164,9 +164,7 @@ return (
                  <div key={meet._id} className="col-md-4">
                   <div className="card mb-5">    
                   <div className="container">
-                   {/* <p><Link to={`/meet/${meet._id}`} > */}
-                   <p><Link to={`/meet/${meet._id}`} >
-
+                  <p><Link to={`/meet/${meet._id}`} >
                   <img  src={meet.eventImage} className="img-fluid" alt={meet.eventTitle}/>
                   </Link></p>
                   <p>Day/Date:- {meet.eventDay}, {meet.eventDate}</p>

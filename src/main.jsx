@@ -14,10 +14,8 @@ const router = createBrowserRouter([
   {
     path: '/meet/:meetId',
     element: <DetailPage />
-
   }
-
-
+  
 ])
 
 createRoot(document.getElementById('root')).render(

@@ -1,6 +1,5 @@
 import useFetch from "./useFetch"
 import { useParams } from 'react-router-dom';
-import NavbarFilter from "./components/NavbarFilter";
 
 const DetailPage = ({}) => {
     const { meetId } = useParams();
@@ -15,7 +14,6 @@ console.log(data)
             <p>Hosted By: <strong>{data?.eventHost}</strong></p>
             <img src={data?.eventImage} className="img-fluid" alt={data?.eventTitle} />
 {console.log(data?.eventImage)}
-            
             <br/>
             <h5>Details:</h5>
             <p>{data?.eventDetail}</p>
