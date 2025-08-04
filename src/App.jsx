@@ -5,12 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import NavbarFilter from './components/NavbarFilter';
 import { Link } from 'react-router-dom';
 import DetailPage from './DetailPage';
-
-
-
 // import Navbar from './components/Navbar';
-
-
 
 function App() {
   const {data, loading, error} =  useFetch("https://event-data-murex.vercel.app/meets", [])
@@ -21,7 +16,6 @@ function App() {
   const [meetData, setMeetData] = useState(data)
   console.log(data)
 
- 
   const filteredEvents = eventFilter === "Both" ? data : data?.filter((item) => item.eventMode === eventFilter);
   console.log(filteredEvents)
   
@@ -33,12 +27,9 @@ function App() {
     }
   },[data, eventFilter])
   
-
-
   useEffect(()=> {
     searchOperation(search)
   }, [data])
-
 
    const searchOperation = (value) => {
     setSearch(value)
@@ -53,14 +44,6 @@ function App() {
       setMeetData(data)
     }
    }
-
-
-
-
-
-
-
-
 
   // const [searchTerm, setSearchTerm] = useState("");
   // const [eventFilter, setEventFilter] = useState("Both")
@@ -149,8 +132,6 @@ function App() {
 //     </main>
 //     </div>
 //   )
-
-
 
 
 return (

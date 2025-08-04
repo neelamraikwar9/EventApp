@@ -2,9 +2,6 @@ import useFetch from "./useFetch"
 import { useParams } from 'react-router-dom';
 import NavbarFilter from "./components/NavbarFilter";
 
-
-
-
 const DetailPage = ({}) => {
     const { meetId } = useParams();
 console.log(meetId, "meetId")
@@ -28,43 +25,9 @@ console.log(data)
             {data?.eventCity ? <p>Address: {data?.eventAddress}</p> : null} 
             <p>Restriction: {data?.eventRestriction}</p>
             {data?.eventDressCode ? <p>Dress Code: {data?.eventDressCode}</p> : null}
-            {data?.eventPrice ? <p>Price: {data?.eventPrice}</p> : null} 
-
-
-            
-
-
-
-
-              
-            
-
-
-
-
-
-
-
-
-             {/* "eventTitle": "Marketing Meetup",
-  "eventHost": "Richard F. and Elsa B.`,
-  "eventDate": "13th August 2025",`
-  "eventDay": "Wednesday",`
-  "eventBeginingTime": " 5:00PM",`
-  "eventEndingTime": "6:10PM",`
-  "eventMode": "Online",`
-  "eventDetail": "Monthly` online learning session discussing the latest marketing trends, tech, and AI; includes introductions, discussion, and Q&A",
-  "eventRestriction": "online registration required",
-  "eventWebsite": "placeholdermeet.com",
-  "eventPrice": "Free",
-  "eventImage": "./images/1st.jpg", */}
-            
-
-            
+            {data?.eventPrice ? <p>Price: {data?.eventPrice}</p> : null}          
         </main>
     )
 }
-
-
 
 export default DetailPage

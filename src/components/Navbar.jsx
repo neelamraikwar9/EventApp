@@ -1,17 +1,8 @@
 
 const Navbar = ({searchTerm, search}) => {
-    // const handleSubmit = (event) => {
-    //     event.preventDefault();
-    //     // console.log('jfowiefjwo')
-    //     search()
-
      const handleSearch = (event) => {
-        
          search(event.target.value);
-
      }
-
-    
 
     return (
         <>
@@ -27,10 +18,8 @@ const Navbar = ({searchTerm, search}) => {
     </nav>
     </header>
     <hr/>
-
     </>
     )
-
 }
 
 export default Navbar

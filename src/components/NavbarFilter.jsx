@@ -3,7 +3,6 @@ const NavbarFilter = ({search, searchOperation}) => {
 
      const handleSearch = (event) => {
      searchOperation(event.target.value);
-
      }
 
     return (
@@ -17,10 +16,8 @@ const NavbarFilter = ({search, searchOperation}) => {
     </nav>
     </header>
     <hr/>
-
     </>
     )
-
 }
 
 export default NavbarFilter
