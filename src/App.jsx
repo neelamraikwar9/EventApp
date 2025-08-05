@@ -142,10 +142,11 @@ return (
                 <p>Loading...</p>
             ) : data?.length > 0 ? ( 
           <div>
-                <div className="input-group">
+                {/* <div className="input-group container meetupView "> */}
+                <div className="ms-auto d-flex flex-row align-items-center justify-content-between "> 
                 <h1>Meetup Events</h1>
-                <div className="ms-auto"> 
-                <label htmlFor='eventFil'><strong>Select Event Type </strong>
+                <div className="">
+                <label htmlFor='eventFil' className='py-5 '><strong>Select Event Type </strong>
                 <br/>
                 <select id="eventFil" value={eventFilter} onChange={(event) => setEventFilter(event.target.value)}>
                     <option value="Both">Both</option>
@@ -155,6 +156,7 @@ return (
                 </label>
                 </div>
                 </div>
+                {/* </div> */}
                 <br/>
                 <br/>
         <div className="row">
