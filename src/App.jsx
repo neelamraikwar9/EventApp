@@ -137,14 +137,14 @@ return (
     <div className='container'>
     <NavbarFilter search={search} searchOperation={searchOperation} />
     <main>
-      <div>
+      <div className="container">
             {loading ? (
                 <p>Loading...</p>
             ) : data?.length > 0 ? ( 
           <div>
                 <div className="input-group">
                 <h1>Meetup Events</h1>
-                <div className="ms-auto ps-5"> 
+                <div className="ms-auto"> 
                 <label htmlFor='eventFil'><strong>Select Event Type </strong>
                 <br/>
                 <select id="eventFil" value={eventFilter} onChange={(event) => setEventFilter(event.target.value)}>
