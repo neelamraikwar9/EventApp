@@ -13,8 +13,10 @@ console.log(data)
         <main className="container py-5">
             <h1>{data?.eventTitle}</h1>
             <p>Hosted By: <strong>{data?.eventHost}</strong></p>
-            <img src={data?.eventImage} className="img-fluid" alt={data?.eventTitle} />
+            <div className="container card col-md-4">  
+            <img src={data?.eventImage} className="img-fluid mt-3 mb-3 pe-3" alt={data?.eventTitle} />
 {console.log(data?.eventImage)}
+            </div>
             
             <br/>
             <h5>Details:</h5>

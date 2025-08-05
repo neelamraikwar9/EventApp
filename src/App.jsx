@@ -145,7 +145,8 @@ return (
                 <div className="input-group">
                 <h1>Meetup Events</h1>
                 <div className="ms-auto ps-5"> 
-                <label htmlFor='eventFil'>Select Event Type
+                <label htmlFor='eventFil'><strong>Select Event Type </strong>
+                <br/>
                 <select id="eventFil" value={eventFilter} onChange={(event) => setEventFilter(event.target.value)}>
                     <option value="Both">Both</option>
                     <option value="Online">Online</option>
@@ -163,12 +164,12 @@ return (
                  <div key={meet._id} className="col-md-4">
                   <div className="card mb-5">    
                   <div className="container">
-                  <p><Link to={`/meet/${meet._id}`} >
-                  <img  src={meet.eventImage} className="img-fluid" alt={meet.eventTitle}/>
+                  <p><Link to={`/meet/${meet._id}`}>
+                  <img  src={meet.eventImage} className="img-fluid mt-3" alt={meet.eventTitle}/>
                   </Link></p>
                   <p>{meet.eventDay}, {meet.eventDate}</p>
                   <p>Time:- {meet.eventBeginingTime} to {meet.eventEndingTime}</p>
-                  <h5>{meet.eventTitle}({meet.eventMode})</h5>
+                  <h5>{meet.eventTitle}</h5>
                  </div>
                  </div>
                  </div>
