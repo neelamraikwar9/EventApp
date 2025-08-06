@@ -8,12 +8,12 @@ const NavbarFilter = ({search, searchOperation}) => {
 
     return (
         <>
-    <header className="container">
-    <nav className="navbar bg-body-tertiary">
-        <div className="container-fluid">
+    <header>
+    <nav className="navbar">
+        {/* <div className="container-fluid"> */}
             <NavLink to="/" className="navbar-brand">MEETUP</NavLink>
               <input className="form-control me-2"  placeholder="Search"  onChange={handleSearch} value={search}/>
-        </div>
+        {/* </div> */}
     </nav>
     </header>
     <hr/>
