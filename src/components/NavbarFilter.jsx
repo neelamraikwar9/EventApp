@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 
 const NavbarFilter = ({search, searchOperation}) => {
 
@@ -10,7 +11,7 @@ const NavbarFilter = ({search, searchOperation}) => {
     <header className="container">
     <nav className="navbar bg-body-tertiary">
         <div className="container-fluid">
-            <a className="navbar-brand">MEETUP</a>
+            <NavLink to="/" className="navbar-brand">MEETUP</NavLink>
               <input className="form-control me-2"  placeholder="Search"  onChange={handleSearch} value={search}/>
         </div>
     </nav>

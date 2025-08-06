@@ -142,7 +142,7 @@ return (
                 <p>Loading...</p>
             ) : data?.length > 0 ? ( 
           <div>
-                {/* <div className="input-group container meetupView "> */}
+                
                 <div className="ms-auto d-flex flex-row align-items-center justify-content-between "> 
                 <h1>Meetup Events</h1>
                 <div className="">
@@ -156,7 +156,7 @@ return (
                 </label>
                 </div>
                 </div>
-                {/* </div> */}
+                
                 <br/>
                 <br/>
         <div className="row">

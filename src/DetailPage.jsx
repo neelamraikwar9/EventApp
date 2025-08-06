@@ -1,5 +1,6 @@
 import useFetch from "./useFetch"
 import { useParams } from 'react-router-dom';
+import { NavLink } from "react-router-dom";
 
 
 const DetailPage = ({}) => {
@@ -11,7 +12,12 @@ console.log(data)
 
     return(
         <main className="container py-5">
-            <h1>{data?.eventTitle}</h1>
+        <header className="bg-ligh">
+            <nav className="navbar navbar-expand-lg">
+                <NavLink to="/" className="navbar-brand text-dark"><strong><h1>All Meetup Events</h1></strong></NavLink>
+            </nav>
+        </header>
+            <h2>{data?.eventTitle}</h2>
             <p>Hosted By: <strong>{data?.eventHost}</strong></p>
             <div className="container card col-md-4">  
             <img src={data?.eventImage} className="img-fluid mt-3 mb-3 pe-3" alt={data?.eventTitle} />
